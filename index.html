@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitrine Catálogos</title>
     <style>
         body {
@@ -13,21 +14,31 @@
 
         h1 {
             color: #240141;
+            font-size: 2.2em;
+        }
+
+        p {
+            font-size: 1.3em;
         }
 
         .link-container {
             margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
         a {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 25px;
+            display: block;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
             background-color: #240141;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 1.2em;
             transition: background-color 0.3s;
         }
 
@@ -36,12 +47,26 @@
         }
 
         .imagem-redonda {
-            width: 150px; 
-            height: 150px;
+            width: 200px; 
+            height: 200px;
             object-fit: cover; 
             border-radius: 50%;
-            margin-bottom: 20px;
-            border: 4px solid #fff; 
+            margin-bottom: 30px;
+            border: 5px solid #fff; 
+        }
+
+        @media (min-width: 600px) {
+            .link-container {
+                flex-direction: row;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            a {
+                font-size: 1.1em;
+                padding: 15px 30px;
+                width: auto;
+            }
         }
     </style>
 </head>
